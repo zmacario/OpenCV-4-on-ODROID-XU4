@@ -96,7 +96,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D BUILD_EXAMPLES=OFF ..
 ```
 Observation: I decided to explicitly enable all OpenCV features I knew so far and exclude its documentation and examples.
-### 12. Start the compilation:
+### 12. Start compilation:
 ```bash
 make -j4
 ```
