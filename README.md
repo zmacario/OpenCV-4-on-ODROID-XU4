@@ -53,7 +53,7 @@ wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.1.
 unzip opencv.zip
 unzip opencv_contrib.zip
 ```
-### 9. Rename unziped folders for your convenience:
+### 9. Rename unzipped folders for your convenience:
 ```bash
 mv opencv-4.1.2 opencv
 mv opencv_contrib-4.1.2 opencv_contrib
