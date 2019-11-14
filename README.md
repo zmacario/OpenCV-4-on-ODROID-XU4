@@ -1,7 +1,7 @@
 # OpenCV 4.1 on ODROID-XU4
 ## How to compile and install OpenCV 4.1.2 on Ubuntu Mate 18.04 LTS with Python 3.6.8 under ODROID XU4.
 
-### 1. Start updating the system packages manager with the following commands on terminal:
+### 1. Start updating your system with the following commands on terminal:
 
 ```bash
 sudo apt update
@@ -56,3 +56,71 @@ sudo apt -y install libjasper-dev libjasper
 wget -O opencv.zip https://github.com/opencv/opencv/archive/4.1.2.zip
 wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.1.2.zip
 ```
+
+### 8. 
+```bash
+unzip opencv.zip
+unzip opencv_contrib.zip
+```
+
+### 9. 
+```bash
+mv opencv-4.1.2 opencv
+mv opencv_contrib-4.1.2 opencv_contrib
+```
+
+### 10.
+```bash
+mkdir opencv_package
+```
+
+### 11. 
+```bash
+cd opencv
+mkdir build
+cd build
+```
+
+### 12.
+```bash
+cmake -D CMAKE_BUILD_TYPE=RELEASE \
+-D CMAKE_INSTALL_PREFIX=/usr/local \
+-D OPENCV_ENABLE_NONFREE=ON \
+-D OPENCV_EXTRA_MODULES_PATH=/home/odroid/Desktop/opencv_contrib/modules \
+-D PYTHON_EXECUTABLE=/usr/bin/python3.6 \
+-D PYTHON2_EXECUTABLE=/usr/bin/python2.7 \
+-D PYTHON3_EXECUTABLE=/usr/bin/python3.6 \
+-D PYTHON_PACKAGES_PATH=/usr/lib/python3/dist-packages \
+-D PYTHON_LIBRARY=/usr/lib/python3.6/config-3.6m-arm-linux-gnueabihf/libpython3.6m.so \
+-D PYTHON_INCLUDE_DIR=/usr/include/python3.6 \
+-D PYTHON3_NUMPY_INCLUDE_DIRS=/usr/lib/python3/dist-packages/numpy/core/include \
+-D OPENCV_GENERATE_PKGCONFIG=ON \
+-D OPENCV_PYTHON3_INSTALL_PATH=/home/odroid/Desktop/opencv_package \
+-D INSTALL_PYTHON_EXAMPLES=OFF \
+-D INSTALL_C_EXAMPLES=OFF \
+-D BUILD_DOCS=NO \
+-D BUILD_TIFF=ON \
+-D WITH_FFMPEG=ON \
+-D WITH_GSTREAMER=ON \
+-D WITH_TBB=ON \
+-D BUILD_TBB=ON \
+-D WITH_V4L=ON \
+-D WITH_LIBV4L=ON \
+-D WITH_VTK=OFF \
+-D WITH_OPENGL=ON \
+-D BUILD_NEW_PYTHON_SUPPORT=ON \
+-D BUILD_TESTS=OFF \
+-D BUILD_EXAMPLES=OFF ..
+```
+
+### 13.
+```bash
+make -j4
+```
+
+### 14.
+```bash
+sudo make install
+sudo ldconfig
+```
+sudo apt update
