@@ -10,7 +10,7 @@ sudo apt upgrade
 ```bash
 sudo apt -y install build-essential cmake gfortran pkg-config unzip software-properties-common doxygen
 ```
-### 3. Update/install Python2/Python3 and Numpy (development versions) with:
+### 3. Update/install Python2/Python3 and Numpy (development versions too) with:
 ```bash
 sudo apt -y install python-dev python-pip python3-dev python3-pip python3-testresources
 sudo apt -y install python-numpy python3-numpy
