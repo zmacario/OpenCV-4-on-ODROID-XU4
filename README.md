@@ -96,13 +96,13 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D BUILD_EXAMPLES=OFF ..
 ```
 Observation: I decided to explicitly enable all OpenCV features I knew so far and exclude its documentation and examples.
-
-Now, be patient again! This will take a long time...
 ### 12. Start the compilation:
 ```bash
 make -j4
 ```
-As ODROID XU4 has 8 cores you will use half of them with "-j4" argument.
+Observation: As ODROID XU4 has 8 cores you will use half of them with "-j4" argument.
+
+Now, be patient again! This process will take a long time...
 ### 13. Install your compiled OpenCV 4.1.2:
 ```bash
 sudo make install
