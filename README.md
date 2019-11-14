@@ -122,5 +122,5 @@ make -j4
 ```bash
 sudo make install
 sudo ldconfig
-```
 sudo apt update
+```
