@@ -37,7 +37,7 @@ sudo apt -y install qt5-default v4l-utils
 sudo apt -y install libtbb2
 ```
   
-### 5. Install legacy libraries from Ubuntu 16.08 (it is necessary):
+### 5. Install legacy libraries from Ubuntu 16.04 (it is necessary):
 
 ```bash
 sudo add-apt-repository "deb http://ports.ubuntu.com/ubuntu-ports xenial-security main"
