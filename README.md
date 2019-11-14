@@ -2,27 +2,20 @@
 ## How to compile and install OpenCV 4.1.2 on Ubuntu (Mate) 18.04.3 LTS with Python 3.6.8 under ODROID XU4.
 
 ### 1. Start updating your system with the following commands on terminal:
-
 ```bash
 sudo apt update
 sudo apt upgrade
 ```
-
 ### 2. Install these tools:
-
 ```bash
 sudo apt -y install build-essential cmake gfortran pkg-config unzip software-properties-common doxygen
 ```
-
 ### 3. Update/install Python2/Python3 and Numpy (development versions) with:
-
 ```bash
 sudo apt -y install python-dev python-pip python3-dev python3-pip python3-testresources
 sudo apt -y install python-numpy python3-numpy
 ```
-  
 ### 4. Install a plenty of stuff that will guarantee or add functionalities to your OpenCV:
-
 ```bash
 sudo apt -y install libblas-dev libblas-test liblapack-dev libatlas-base-dev libopenblas-base libopenblas-dev
 sudo apt -y install libjpeg-dev libpng-dev libtiff-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
@@ -36,15 +29,13 @@ sudo apt -y install protobuf-compiler libgoogle-glog-dev libgflags-dev libgphoto
 sudo apt -y install qt5-default v4l-utils
 sudo apt -y install libtbb2
 ```
-  
+Be patient, that will take a long time...
 ### 5. Install legacy libraries from Ubuntu 16.04 (it is necessary):
-
 ```bash
 sudo add-apt-repository "deb http://ports.ubuntu.com/ubuntu-ports xenial-security main"
 sudo apt -y update
 sudo apt -y install libjasper-dev libjasper
 ```
-
 ### 6. Create a folder that should receive your (future) compiled OpenCV 4.1.2 package:
 ```bash
 mkdir opencv_package
@@ -52,33 +43,27 @@ mkdir opencv_package
 You can create that folder in any place you want but you must have to remeber its full path when you start the compiler configuration step.
 
 Observation: All next steps (including this one) I executed from my "/home/odroid/Desktop/".
-
 ### 7. Download official OpenCV 4.1.2 zipped source files:
-
 ```bash
 wget -O opencv.zip https://github.com/opencv/opencv/archive/4.1.2.zip
 wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.1.2.zip
 ```
-
 ### 8. Unzip downloaded source files:
 ```bash
 unzip opencv.zip
 unzip opencv_contrib.zip
 ```
-
 ### 9. Rename unziped folders for your convenience:
 ```bash
 mv opencv-4.1.2 opencv
 mv opencv_contrib-4.1.2 opencv_contrib
 ```
-
 ### 10. Go into unziped OpenCV source folder and create a temporary work folder that should be used by the compiler:
 ```bash
 cd opencv
 mkdir build
 cd build
 ```
-
 ### 11. Configure the compiler with the following command:
 ```bash
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
@@ -111,12 +96,13 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D BUILD_EXAMPLES=OFF ..
 ```
 Observation: I decided to explicitly enable all OpenCV features I knew so far and exclude documentation and examples.
+
+Now, be patient again! This will take a long time...
 ### 12. Start the compilation:
 ```bash
 make -j4
 ```
 As ODROID XU4 has 8 cores you will use half of them with "-j4" argument.
-
 ### 13. Install your compiled OpenCV 4.1.2:
 ```bash
 sudo make install
