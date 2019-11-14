@@ -1,33 +1,33 @@
-## OpenCV 4.1 on ODROID-XU4
-How to compile and install OpenCV 4.1.2 on Ubuntu Mate 18.04 LTS with Python 3.6.8 under ODROID XU4.
+# OpenCV 4.1 on ODROID-XU4
+## How to compile and install OpenCV 4.1.2 on Ubuntu Mate 18.04 LTS with Python 3.6.8 under ODROID XU4.
 
-1. Start updating the system packages manager with the following commands on terminal:
+### 1. Start updating the system packages manager with the following commands on terminal:
 
 ```bash
 sudo apt update
 sudo apt upgrade
 ```
 
-2. Install these tools:
+### 2. Install these tools:
 
 ```bash
 sudo apt -y install build-essential cmake gfortran pkg-config unzip software-properties-common doxygen
 ```
 
-3. Update/install Python2/Python3 and Numpy developing libraries with:
+### 3. Update/install Python2/Python3 and Numpy developing libraries with:
 
 ```bash
 sudo apt -y install python-dev python-pip python3-dev python3-pip python3-testresources
 sudo apt -y install python-numpy python3-numpy
 ```
   
-4. 
+### 4. 
 
 ```bash
 sudo apt -y install libblas-dev libblas-test liblapack-dev libatlas-base-dev libopenblas-base libopenblas-dev
 ```
   
-5. 
+### 5. 
 
 ```bash
 sudo apt -y install libjpeg-dev libpng-dev libtiff-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
@@ -42,7 +42,7 @@ sudo apt -y install qt5-default v4l-utils
 sudo apt -y install libtbb2
 ```
   
-6.
+### 6. Install legacy libraries from Ubuntu 16.08
 
 ```bash
 sudo add-apt-repository "deb http://ports.ubuntu.com/ubuntu-ports xenial-security main"
@@ -50,7 +50,7 @@ sudo apt -y update
 sudo apt -y install libjasper-dev libjasper
 ```
 
-7.
+### 7. Download official OpenCV 4.1.2 sources
 
 ```bash
 wget -O opencv.zip https://github.com/opencv/opencv/archive/4.1.2.zip
