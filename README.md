@@ -110,12 +110,12 @@ sudo ldconfig
 sudo apt update
 ```
 ### Last considerations:
-At the end of compilation, the binary object created that really matters will be 'cv2.cpython-36m-arm-linux-gnueabihf.so' located at 'opencv_package' folder.
+At the end of compilation, the binary object created that really matters will be 'cv2.cpython-36m-arm-linux-gnueabihf.so' located at 'opencv_package' folder. Don't delete it!
 
 Odroid XU4 manufacturer official link for Ubuntu download I used:
 https://odroid.in/ubuntu_18.04lts/XU3_XU4_MC1_HC1_HC2/ubuntu-18.04.3-4.14-mate-odroid-xu4-20190929.img.xz
 
-Don't forget to delete files and folders you downloaded and created on steps 7 to 10, respectively.
+Don't forget to delete/remove files and folders you downloaded or created on steps 7 to 10, respectively.
 
 Clean your system with the following commands:
 ```bash
