@@ -27,7 +27,7 @@ sudo apt -y install python-numpy python3-numpy
 sudo apt -y install libblas-dev libblas-test liblapack-dev libatlas-base-dev libopenblas-base libopenblas-dev
 ```
   
-### 5. 
+### 5. Install a plenty of stuff that will guarantee or add functionalities to your OpenCV library:
 
 ```bash
 sudo apt -y install libjpeg-dev libpng-dev libtiff-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
@@ -81,7 +81,7 @@ mkdir build
 cd build
 ```
 
-### 12. 
+### 12. Configure the compiler with the following command:
 ```bash
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D CMAKE_INSTALL_PREFIX=/usr/local \
@@ -113,12 +113,12 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D BUILD_EXAMPLES=OFF ..
 ```
 
-### 13.
+### 13. Start the compilation:
 ```bash
 make -j4
 ```
 
-### 14.
+### 14. Install your compiled OpenCV 4.1.2:
 ```bash
 sudo make install
 sudo ldconfig
