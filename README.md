@@ -50,38 +50,38 @@ sudo apt -y update
 sudo apt -y install libjasper-dev libjasper
 ```
 
-### 7. Download official OpenCV 4.1.2 source files:
+### 7. Create a folder (in any place you want) that should receive the future compiled OpenCV 4.1.2 library:
+```bash
+mkdir opencv_package
+```
+
+### 8. Download official OpenCV 4.1.2 zipped source files:
 
 ```bash
 wget -O opencv.zip https://github.com/opencv/opencv/archive/4.1.2.zip
 wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.1.2.zip
 ```
 
-### 8. Unzip downloaded source files:
+### 9. Unzip downloaded source files:
 ```bash
 unzip opencv.zip
 unzip opencv_contrib.zip
 ```
 
-### 9. Rename unziped folders for your convenience:
+### 10. Rename unziped folders for your convenience:
 ```bash
 mv opencv-4.1.2 opencv
 mv opencv_contrib-4.1.2 opencv_contrib
 ```
 
-### 10. Create a folder (in any place you want) that will receive the compiled OpenCV 4.1.2 library (installation package resulted from the compilation you will do):
-```bash
-mkdir opencv_package
-```
-
-### 11. Go to unziped OpenCV source folder:
+### 11. Go into unziped OpenCV source folder and create a temporary folder that should be used by compiler:
 ```bash
 cd opencv
 mkdir build
 cd build
 ```
 
-### 12.
+### 12. 
 ```bash
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D CMAKE_INSTALL_PREFIX=/usr/local \
