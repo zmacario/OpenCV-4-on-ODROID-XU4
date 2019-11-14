@@ -1,5 +1,5 @@
 # OpenCV 4.1 on ODROID-XU4
-## How to compile and install OpenCV 4.1.2 on Ubuntu Mate 18.04 LTS with Python 3.6.8 under ODROID XU4.
+## How to compile and install OpenCV 4.1.2 on Ubuntu (Mate) 18.04.3 LTS with Python 3.6.8 under ODROID XU4.
 
 ### 1. Start updating your system with the following commands on terminal:
 
@@ -110,7 +110,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D BUILD_TESTS=OFF \
 -D BUILD_EXAMPLES=OFF ..
 ```
-
+Observation: I decided to explicitly enable all opencv features I knew so far and exclude documentation and examples.
 ### 12. Start the compilation:
 ```bash
 make -j4
