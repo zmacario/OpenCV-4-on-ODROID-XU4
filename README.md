@@ -15,7 +15,7 @@ sudo apt -y install build-essential cmake gfortran pkg-config unzip software-pro
 sudo apt -y install python-dev python-pip python3-dev python3-pip python3-testresources
 sudo apt -y install python-numpy python3-numpy
 ```
-### 4. Install a plenty of stuff that will guarantee or add functionalities to your OpenCV:
+### 4. Install a plenty of stuff that will guarantee or add features to your OpenCV:
 ```bash
 sudo apt -y install libblas-dev libblas-test liblapack-dev libatlas-base-dev libopenblas-base libopenblas-dev
 sudo apt -y install libjpeg-dev libpng-dev libtiff-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
@@ -109,6 +109,16 @@ sudo make install
 sudo ldconfig
 sudo apt update
 ```
-### Last consideration:
+### Last considerations:
+At the end of compilation, the binary object created that really matters will be 'cv2.cpython-36m-arm-linux-gnueabihf.so' located at 'opencv_package' folder.
+
 Odroid XU4 manufacturer official link for Ubuntu download I used:
 https://odroid.in/ubuntu_18.04lts/XU3_XU4_MC1_HC1_HC2/ubuntu-18.04.3-4.14-mate-odroid-xu4-20190929.img.xz
+
+Don't forget to delete files and folders you downloaded and created on steps 7 to 10, respectively.
+
+Clean your system with the following commands:
+```bash
+sudo apt autoremove
+sudo apt clean
+```
