@@ -95,7 +95,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D BUILD_TESTS=OFF \
 -D BUILD_EXAMPLES=OFF ..
 ```
-Observation: I decided to explicitly enable all OpenCV features I knew so far and exclude documentation and examples.
+Observation: I decided to explicitly enable all OpenCV features I knew so far and exclude its documentation and examples.
 
 Now, be patient again! This will take a long time...
 ### 12. Start the compilation:
