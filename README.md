@@ -1,5 +1,5 @@
 # OpenCV 4.1 on ODROID-XU4
-## How to compile and install OpenCV 4.1.2 on Ubuntu 18.04.3 LTS (Bionic Beaver) with Python 3.6.8 under ODROID-XU4.
+## How to compile and install OpenCV 4.1.2 on Ubuntu 18.04.3 LTS (Bionic Beaver) with Python 3.6.8 on the ODROID-XU4 platform.
 
 ### 1. Start updating your system with the following commands on terminal:
 ```bash
